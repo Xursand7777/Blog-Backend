@@ -20,4 +20,7 @@ export class AdminRepository{
     return this.admins.find(admin => admin.login === login);
   }
 
+  async find(id:number):Promise<Admin | undefined> {
+    return this.admins.find(admin => admin.id === id);
+  }
 }
